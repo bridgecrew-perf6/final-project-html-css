@@ -1,6 +1,6 @@
 const query = "London";
 
-const apiKey = "7be150dda58053fdd55c8b2433eba81a";
+const apiKey = "";
 
 const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
 
