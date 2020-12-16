@@ -1,57 +1,63 @@
-const query = "London";
+const menuIcon = document.getElementById("menu");
+const closeIcon = document.getElementById("close");
+const navbar = document.getElementById("navbar");
+const backScreen = document.getElementById("backScreen");
 
-const apiKey = "";
+// const isCheckWidth = () => {
+//   if (window.innerWidth == 670) {
+//     menuIcon.classList.remove("menu-toggle");
+//     closeIcon.classList.remove("close-toggle");
+//     navbar.classList.remove("navbar");
+//     backScreen.classList.remove("backScreen");
+//     console.log("test")
+//   }
+// }
+// window.onresize = isCheckWidth;
 
-const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("toggle");
+  backScreen.classList.toggle("toggle");
 
-const city = document.getElementById("city");
-const send = document.getElementById("send");
+  menuIcon.classList.toggle("menu-toggle");
+  closeIcon.classList.toggle("close-toggle");
+});
 
-// const weather = document.getElementById("weather");
-// const weatherImage = document.getElementById("weatherImage");
-let weather = null;
-let weatherImage = null;
+closeIcon.addEventListener("click", () => {
+  navbar.classList.toggle("toggle");
+  backScreen.classList.toggle("toggle");
 
+  menuIcon.classList.toggle("menu-toggle");
+  closeIcon.classList.toggle("close-toggle");
+});
 
+backScreen.addEventListener("click", () => {
+  navbar.classList.toggle("toggle");
+  backScreen.classList.toggle("toggle");
 
-const response = async (url) => {
-  const res = await fetch(url);
-  const val = await res.json();
-  return val;
-}
+  menuIcon.classList.toggle("menu-toggle");
+  closeIcon.classList.toggle("close-toggle");
+});
 
-window.onload = async () => {
-  const res = await response(url);
-  const icon = res.weather[0].icon;
+// slider click
+const slider01 = document.getElementById("slider01");
+const slider02 = document.getElementById("slider02");
+const header = document.getElementById("header");
 
-  const addEl = document.createElement("div");
-  addEl.id = "weather";
-  const addText =`${query} is ${res.weather[0].description}. Temp is ${res.main.temp}`
-  const addElText = document.createTextNode(addText);
-  addEl.appendChild(addElText);
-  document.body.appendChild(addEl);
+slider01.addEventListener("click", () => {
+  header.classList.replace("slider-image02", "slider-image01");
+});
 
-  const addElImage = document.createElement("img");
-  addElImage.id = "weatherImage";
-  addElImage.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-  document.body.appendChild(addElImage);
-
-  weather = document.getElementById("weather");
-  weatherImage = document.getElementById("weatherImage");
-
-}
-
-send.addEventListener("click", async () => {
-  console.log(weather)
-  console.log(weatherImage)
-  
-  const query = city.value;
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}`;
-  const res = await response(url);
-  const icon = res.weather[0].icon;
-  weather.innerHTML = `${query} is ${res.weather[0].description}. Temp is ${res.main.temp}`;
-  weatherImage.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+slider02.addEventListener("click", () => {
+  header.classList.replace("slider-image01", "slider-image02");
 });
 
 
-
+setInterval(() => {
+  if (header.className === "slider-image01") {
+    header.classList.replace("slider-image01", "slider-image02");
+  } else if (header.className === "slider-image02") {
+    header.classList.replace("slider-image02", "slider-image01");
+  } else {
+    console.log("Doesn't work sliders");
+  }
+}, 6000);

@@ -1,3 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: sans-serif;
+}
+
+h1 {
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* header */
+header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+}
+
+.slider-image01 {
+  background-image: url(https://cdn.pixabay.com/photo/2020/06/21/16/57/tomatoes-5325850__480.jpg);
+}
+
+.slider-image02 {
+  background-image: url(https://cdn.pixabay.com/photo/2020/05/28/18/51/eat-5232255__480.jpg);
+}
+
+header nav {
+  color: black;
+  height: 5rem;
+  padding: 1rem;
+  background-color: white;
+  display: block;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.backScreen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(29, 29, 29, 0.904);
+  z-index: -100;
+}
+
+
+header nav p {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+/* header nav ul {
+  display: flex;
+} */
+
+header nav a {
+  text-transform: uppercase;
+}
+
+header .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .title h1 {
+  color: white;
+}
+
+nav .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  /* color: white; */
+  z-index: -1;
+  background-color: white;
+  width: 100%;
+  height: 10rem
+}
+
+nav .navbar li:nth-child(1) {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+}
+
+nav .navbar li:nth-child(2) {
+  position: absolute;
+  top: 6rem;
+  width: 100%;
+}
+
+nav .navbar li:nth-child(3) {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+}
+
+nav .navbar a {
+  color: black;
+  transition: all 0.3s linear;
+}
+
+nav .navbar a:hover {
+  color: rgb(235, 72, 72);
+  font-size: 1.1rem;
+}
+
+header .menu-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  width: 2.5rem;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+header .menu-icon:focus {
+  outline: none;
+}
+
+header .menu-icon:hover {
+  transform: scale(1.1) translateY(-3px)
+}
+
+/* header .menu-icon:active {
+  color: red;
+} */
+
+header .close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  width: 2.5rem;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  display: none;
+}
+
+header .close-icon:focus {
+  outline: none;
+}
+
+header .close-icon:hover {
+  transform: scale(1.1) translateY(-3px)
+}
+
+/* header .close-icon:active {
+  color: red;
+} */
+
+header .menu-toggle {
+  display: none;
+}
+
+header .close-toggle {
+  display: block;
+}
+
+nav .toggle {
+  display: block;
+}
+
+/* nav bar */
+@media (min-width: 670px) {
+  nav .navbar {
+    position: static;
+    color: black;
+    width: 100%;
+    height: inherit;
+  }
+
+  nav .navbar li {
+    text-align: center;
+  }
+
+  nav .navbar li:nth-child(1),
+  nav .navbar li:nth-child(2),
+  nav .navbar li:nth-child(3) {
+    position: static;
+    display: inline-block;
+    width: 100px;
+  }
+
+  nav .navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  header .menu-icon,
+  header .close-icon,
+  header .backScreen {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul li:not(:first-of-type) {
+    padding-left: 1rem;
+    margin-top: auto 0;
+  }
+
+  header nav .toggle {
+    display: none;
+  }
+}
+
+/* header slider */
+.slider01 {
+  position: absolute;
+  top: 90%;
+  left: 45%;;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(235deg, rgba(105, 104, 104, 0.945), rgba(180, 180, 180, 0.932));
+  border-radius: 50%;
+}
+
+.slider02 {
+  position: absolute;
+  top: 90%;
+  left: 55%;;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(235deg, rgba(105, 104, 104, 0.945), rgba(180, 180, 180, 0.932));
+  border-radius: 50%;
+}
+
+
+/* google map section */
+.section-googleMap {
+  /* height: 50vh; */
+  width: 90vw;
+  margin: 5rem auto;
+}
+
+.section-googleMap .row:nth-child(1) {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+
+.section-googleMap .row:nth-child(2) {
+  /* height: 30vh; */
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-googleMap .map-image, .section-googleMap .info {
+  /* height: inherit; */
+  flex: 1;
+  align-self: center;
+}
+
+.section-googleMap .info {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section-googleMap .info ul {
+  font-size: 1.2rem;
+  /* margin: auto; */
+}
+
+.section-googleMap .info ul li:not(:nth-child(1)){
+  margin-top: 1rem;
+}
+
+.section-googleMap .info ul span{
+  display: inline-block;
+  width: 90px;
+}
+
+.section-googleMap .info a {
+  /* display: inline-block; */
+  margin: 2rem 0;
+  padding: 0.7rem 1.5rem;
+  background-color: orange;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+.section-googleMap .map-image img {
+  /* height: inherit; */
+  width: 100%;
+  min-width: 300px;
+}
+/* @media (min-width: 420px) {
+  .section-googleMap .row:nth-child(2) {
+    flex-direction: column;
+  }
+} */
+
+
+
+/* delete later */
+main {
+  height: 50vh;
+  background-color: coral;
+}
+footer {
+  height: 50vh;
   background-color: coral;
 }
