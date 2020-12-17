@@ -288,7 +288,7 @@ header .titleToggle {
 .menu-section {
   width: 90vw;
   max-width: 815px;
-  margin: 2rem auto;
+  margin: 5rem auto;
 }
 
 .menu-section .menu-time {
@@ -306,17 +306,18 @@ header .titleToggle {
 }
 
 .menu-section .menu-time .menu-list li {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: all 0.2s linear;
 }
 
 .menu-section .menu-time .menu-list li:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .menu-section .normalFood h2 {
   text-align: center;
   margin: 3rem 0 2rem 0;
+  font-size: 1.2rem;
 }
 
 .menu-section .normalFood:not(:first-of-type) h2::after {
