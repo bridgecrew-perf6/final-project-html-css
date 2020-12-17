@@ -396,7 +396,7 @@ header .titleToggle {
   width: 100%;
 }
 
-.section-googleMap .info a {
+.section-googleMap .info .open-map {
   color: white;
   margin: 2rem auto;
   padding: 0.7rem 1.5rem;
@@ -406,7 +406,7 @@ header .titleToggle {
   transition: all 0.2s linear;
 }
 
-.section-googleMap .info a:hover {
+.section-googleMap .info .open-map:hover {
   color: orange;
   border: 1px solid orange;
   background-color: white;
