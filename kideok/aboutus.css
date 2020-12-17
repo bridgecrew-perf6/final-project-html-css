@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    width: 1440px;
+}
+h3{
+    color:rgba(31, 69, 30, 1);
+    padding-bottom: 30px;
+    margin-left: 125px;
+    margin-top: 63px;
+}
+
+p{
+    border: none;
+    width: 554px;
+    height: 499px;
+    margin-left: 127px;
+}
+
+img{
+    width: 588px;
+    height: 234px;
+    float: right;
+    margin-right: 120px;
+    margin-top: 78px;
+}
