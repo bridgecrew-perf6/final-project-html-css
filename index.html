@@ -3,15 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>for merge</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <script src="https://kit.fontawesome.com/5bf5434648.js" crossorigin="anonymous"></script>
+  <title>BOSSANOVA</title>
 </head>
 <body>
-  <ul class="list">
-    <li><a href="./hiro/index.html">Hiro Section</a></li>
-    <li><a href="./marina/index.html">Marina Section</a></li>
-    <li><a href="./dogus/index.html">Dogus Section</a></li>
-    <li><a href="./kideok/index.html">Kideok Section</a></li>
-  </ul>
+  <!-- header section start -->
+  <header class="slider-image01" id="header">
+    <nav>
+      <div>
+        <a href="/hiro/index.html" class="shop-name"><img src="./images/logo.png" alt="logo" class="logo"></a>
+      </div>
+      <div>
+        <ul class="navbar" id="navbar">
+          <li><a href="./menu.html">our menu</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="./contact.html">contact</a></li>
+        </ul>
+      </div>
+      <div class="backScreen" id="backScreen"></div>
+      <button class="menu-icon" id="menu"><i class="fas fa-bars"></i></button>
+      <button class="close-icon" id="close"><i class="fas fa-times"></i></button>
+    </nav>
+    <div class="title title-top" id="title-top">
+      <h1>Discover the best of the Brazilian flavors</h1>
+      <a href="./menu.html">see menu</a>
+    </div>
+    <div class="title title-covid" id="title-covid">
+      <h1>Bossa Nova Covid-19 Measures</h1>
+      <a href="https://bit.ly/2WoCEaT" target="_blank">stay safe</a>
+    </div>
+    <div class="slider01" id="slider01"></div>
+    <div class="slider02" id="slider02"></div>
+  </header>
+  <!-- header section end -->
+
+  <main>
+    <!-- gallery section start -->
+    <div class="container">
+      <div  class="photo-gallery-title">
+        <h2>photo gallery</h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images/gallery_images/gallery01.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images/gallery_images/gallery02.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images/gallery_images/gallery03.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images//gallery_images/gallery04.jpg">
+        </div>
+
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images//gallery_images/gallery05.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images//gallery_images/gallery06.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images//gallery_images/gallery07.jpg">
+        </div>
+        <div class="gallery-item">
+          <img class="gallery-image" src="./images//gallery_images/gallery08.jpg">
+        </div>
+      </div>
+    </div>
+    <!-- gallery section end -->
+  </main>
+
+  <!-- googleMap section start -->
+  <section class="section-googleMap">
+    <div class="row">
+      <h2>where we are</h2>
+    </div>
+    <div class="row">
+      <div class="map-image">
+        <img src="./images/googleMap.png" alt="google-map">
+      </div>
+      <div class="info">
+        <ul>
+          <li><span>Adress:</span> Smithe St. 506 - Downtown Vancouver, BC, Canada.</li>
+          <li><span>Phone:</span> (604) 999.9999</li>
+          <li><span>E-mail us:</span> bossanova.vancouver@bossanova.ca</li>
+        </ul>
+        <a href="https://bit.ly/3mmZNoD" target="_blank">open map</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- googleMap section end -->
+
+  <!-- footer section start -->
+  <footer>
+    <div class="footer">
+      <div class="follow-us">
+        <p>Follow Us</p>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram-square"></i>
+      </div>
+      <div class="sign-up">
+        <p>Sign Up for exculusive promotions:</p>
+        <label for="email"></label>
+        <input placeholder="Your Email" type="email" id="email" name="email">
+        <button class="sign-up-button">SIGN UP</button>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end -->
+  
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
