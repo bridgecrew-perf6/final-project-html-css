@@ -372,7 +372,7 @@ header .titleToggle {
 
 /* google map section */
 .section-googleMap .row:nth-child(1) {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
   font-size: 1.5rem;
   text-transform: capitalize;
@@ -442,10 +442,14 @@ header .titleToggle {
   width: 100%;
   min-width: 350px;
 }
-@media (min-width: 786px) {
+@media (min-width: 950px) {
   .section-googleMap {
     width: 90vw;
     margin: 5rem auto;
+  }
+
+  .section-googleMap .row:nth-child(1) {
+    margin-bottom: 3rem;
   }
 
   .section-googleMap .row:nth-child(1) h2 {
@@ -535,7 +539,7 @@ header .titleToggle {
 @supports (display: grid) {
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(8.7rem, 1fr));
 		grid-gap: 2rem;
 	}
 
