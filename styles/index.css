@@ -107,7 +107,7 @@ header .title {
 
 header .title h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 header .title a {
@@ -231,6 +231,11 @@ header .titleToggle {
   display: block;
 }
 /* nav bar */
+@media (min-width: 400px) {
+  header .title h1 {
+    font-size: 3rem;
+  }
+}
 @media (min-width: 850px) {
   header .title h1 {
     font-size: 5rem;
@@ -317,28 +322,44 @@ header .titleToggle {
   transform: translateX(-55%);
 }
 
+.slider-active {
+  background: linear-gradient(235deg, rgba(248, 162, 3, 0.945), rgba(252, 194, 36, 0.932));
+}
+
 /* about section */
-.section{
+.section {
   width: 90vw;
   margin: 5rem auto;
 }
-.about-center{
+
+.about-center {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.about-center img{
+
+.about-center img {
   display: block;
 }
-.about-img{
+
+.about-img {
   flex: 1;
   align-self: center;
 }
-.about-info{
+
+.about-info {
   flex: 1;
   align-self: center;
+  margin: 0 1rem;
 }
-.about-photo{
+
+.about-info h3 {
+  color: rgb(26, 83, 26);
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.about-photo {
   width: 100%;
   min-width: 300px;
 }
@@ -349,12 +370,11 @@ header .titleToggle {
   }
 }
 
-
 /* google map section */
 .section-googleMap .row:nth-child(1) {
   margin-bottom: 3rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 
@@ -460,13 +480,13 @@ header .titleToggle {
 .container {
 	margin: auto auto;
   padding: 2rem 2rem;
-  background-color:#FFB905;
+  background-color:#f7bb24a8;
 }
 
 .photo-gallery-title {
   margin-bottom: 3rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 
@@ -493,7 +513,7 @@ header .titleToggle {
 
 .gallery-item {
 	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 10rem;
+	flex: 1 0 12rem;
 	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
 	margin: .5rem;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
@@ -515,7 +535,7 @@ header .titleToggle {
 @supports (display: grid) {
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 		grid-gap: 2rem;
 	}
 
