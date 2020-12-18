@@ -50,6 +50,8 @@ slider01.addEventListener("click", () => {
   titleCovid.classList.remove("titleToggle");
   titleCovid.classList.remove("show");
   titleTop.classList.remove("close");
+  slider01.classList.add("slider-active");
+  slider02.classList.remove("slider-active");
 });
 
 slider02.addEventListener("click", () => {
@@ -57,17 +59,27 @@ slider02.addEventListener("click", () => {
   titleCovid.classList.add("titleToggle");
   titleCovid.classList.add("show");
   titleTop.classList.add("close");
+  slider01.classList.remove("slider-active");
+  slider02.classList.add("slider-active");
 });
 
 
-// setInterval(() => {
-//   if (header.className === "slider-image01") {
-//     header.classList.replace("slider-image01", "slider-image02");
-//     title.classList.add("titleToggle");
-//   } else if (header.className === "slider-image02") {
-//     header.classList.replace("slider-image02", "slider-image01");
-//     title.classList.remove("titleToggle");
-//   } else {
-//     console.log("Doesn't work sliders");
-//   }
-// }, 6000);
+setInterval(() => {
+  if (header.className === "slider-image01") {
+    header.classList.replace("slider-image01", "slider-image02");
+    titleCovid.classList.add("titleToggle");
+    titleCovid.classList.add("show");
+    titleTop.classList.add("close");
+    slider01.classList.remove("slider-active");
+    slider02.classList.add("slider-active");
+  } else if (header.className === "slider-image02") {
+    header.classList.replace("slider-image02", "slider-image01");
+    titleCovid.classList.remove("titleToggle");
+    titleCovid.classList.remove("show");
+    titleTop.classList.remove("close");
+    slider01.classList.add("slider-active");
+    slider02.classList.remove("slider-active");
+  } else {
+    console.log("Doesn't work sliders");
+  }
+}, 8000);
